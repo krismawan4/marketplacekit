@@ -16,7 +16,7 @@ class AddLocationToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->point('location')->nullable()->after('ip_address');
-            $table->json('filters')->nullable()->after('deleted_at');
+            $table->text('filters')->nullable()->after('deleted_at');
         });
     }
 

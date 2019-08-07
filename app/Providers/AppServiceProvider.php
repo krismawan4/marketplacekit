@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\FileViewFinder;
+use Illuminate\Support\Facades\Schema;
 use Theme;
 use URL;
 use Crypt;
@@ -22,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
         /*Setting::extend('mystore', function($app) {
             return $app->make('App\Support\MyStore');
         });*/
+
+        Schema::defaultStringLength(191);
 
         $this->app['translator']->addJsonPath(storage_path('app/resources/lang')); //now we can translate without changing the core
 

@@ -30,7 +30,7 @@ class CreateListingPlans extends Migration
             $table->integer('category_id')->nullable()->default(1);
             $table->integer('min_price')->nullable()->default(1);
             $table->integer('max_price')->nullable()->default(1);
-            $table->json('meta')->nullable();
+            $table->text('meta')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

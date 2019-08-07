@@ -32,7 +32,7 @@ class CreatePaymentProvidersTable extends Migration
             $table->boolean('is_offline')->nullable()->default(0);
             $table->boolean('is_enabled')->nullable();
 
-            $table->json('extra_attributes')->nullable();
+            $table->text('extra_attributes')->nullable();
             $table->timestamps();
         });
 

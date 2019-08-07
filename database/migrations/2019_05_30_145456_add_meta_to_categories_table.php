@@ -16,7 +16,7 @@ class AddMetaToCategoriesTable extends Migration
         Schema::table('categories', function (Blueprint $table) {
             //
             $table->string('image')->nullable()->after('hash');
-            $table->json('extra_attributes')->nullable()->after('hash');
+            $table->text('extra_attributes')->nullable()->after('hash');
         });
     }
 

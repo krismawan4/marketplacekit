@@ -22,7 +22,7 @@ class CreateListingPlanPayments extends Migration
             $table->integer('listing_plan_id')->nullable();
             $table->dateTime('started_at')->nullable();
             $table->dateTime('ends_at')->nullable();
-            $table->json('meta')->nullable();
+            $table->text('meta')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

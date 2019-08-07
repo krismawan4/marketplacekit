@@ -17,7 +17,7 @@ class AddQuantitiesToAdditionalOptionsTable extends Migration
             //
             $table->integer('max_quantity')->nullable()->after('price');
             $table->integer('min_quantity')->nullable()->after('price');
-            $table->json('meta')->after('position')->nullable();
+            $table->text('meta')->after('position')->nullable();
         });
     }
 

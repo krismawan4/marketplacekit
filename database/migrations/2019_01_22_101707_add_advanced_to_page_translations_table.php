@@ -18,7 +18,7 @@ class AddAdvancedToPageTranslationsTable extends Migration
             $table->boolean('is_advanced')->nullable()->after('visible');
             $table->string('route')->nullable()->after('slug');
             $table->text('raw_content')->nullable()->after('content');
-            $table->json('extra_attributes')->nullable()->after('visible');
+            $table->text('extra_attributes')->nullable()->after('visible');
         });
     }
 

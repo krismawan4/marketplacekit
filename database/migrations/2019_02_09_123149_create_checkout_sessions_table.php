@@ -17,11 +17,11 @@ class CreateCheckoutSessionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->nullable();
             $table->integer('listing_id')->nullable();
-            $table->json('request')->nullable();
+            $table->text('request')->nullable();
             $table->string('payment_provider_key')->nullable();
             $table->string('status')->nullable()->default('pending');
             $table->integer('order_id')->nullable();
-            $table->json('extra_attributes')->nullable();
+            $table->text('extra_attributes')->nullable();
             $table->timestamps();
         });
     }
